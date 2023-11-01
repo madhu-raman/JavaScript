@@ -22,7 +22,6 @@
 // 🧪 SAMPLE INPUT 1 🧪
 // nums = [2, 4, 5, 9, 8] --> Array elements
 // target = 7 --> Target sum value
-
 // 👌 SAMPLE OUTPUT 1 👌
 // [0, 2]
 

@@ -18,14 +18,12 @@
 
 // 🧪 SAMPLE INPUT 1 🧪
 // nums = [-1 0 1 2 -1 -4]
-
 // 👌 SAMPLE OUTPUT 1 👌
 // [[-1 0 1]
 //  [-1 -1 2]]
 
 // 🧪 SAMPLE INPUT 2 🧪
 // nums = [-3 0 1 2 -1 1 -2]
-
 // 👌 SAMPLE OUTPUT 2 👌
 // [[-3 1 2]
 //  [-2 0 2]

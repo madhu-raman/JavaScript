@@ -14,8 +14,8 @@
 // If input does not satisfy any of the constraints, return "Invalid".
 
 // 🖨️ OUTPUT FORMAT 🖨️
-// If the integer is prime, return "Prime".
-// If the integer is not prime, return "Not Prime"
+// If the integer is prime, return "true".
+// If the integer is not prime, return "false".
 // If the given input doesn't meet any constraint, then return "Invalid".
 
 // 🛑 CONSTRAINTS 🛑
@@ -24,58 +24,51 @@
 
 // 🧪 SAMPLE INPUT 1 🧪
 // n = 0
-
 // 👌 SAMPLE OUTPUT 1 👌
-// Not Prime
+// false
 
 // 🧪 SAMPLE INPUT 2 🧪
 // n = 1
-
 // 👌 SAMPLE OUTPUT 2 👌
-// Not Prime
+// false
 
 // 🧪 SAMPLE INPUT 3 🧪
 // n = -3
-
 // 👌 SAMPLE OUTPUT 3 👌
-// Not Prime
+// false
 
 // 🧪 SAMPLE INPUT 4 🧪
 // n = 1.2
-
 // 👌 SAMPLE OUTPUT 4 👌
 // Invalid
 
 // 🧪 SAMPLE INPUT 5 🧪
 // n = 2/3
-
 // 👌 SAMPLE OUTPUT 5 👌
 // Invalid
 
 // 🧪 SAMPLE INPUT 6 🧪
 // n = 1@23
-
 // 👌 SAMPLE OUTPUT 6 👌
 // Invalid
 
 // 🧪 SAMPLE INPUT 7 🧪
 // n = 1999
-
 // 👌 SAMPLE OUTPUT 7 👌
-// Prime
+// true
 
 // START OF SOLUTION - 🔮 I Solemnly Commit To Coding Curiosity 🔮
 
 function isPrime (n) {
-  if (n % 1 !== 0 || typeof(n) !== "number" || n > 1000000)
-    return "Invalid";
-  if (n <= 1)
-    return "Not Prime";
-  for (var i = 2; i * i <= n; i++) {
-    if (n % i === 0)
-      return "Not Prime";
-  }
-  return "Prime";
+    if (typeof(n) !== "number" || n % 1 !== 0 || n > 1000000)
+        return "Invalid";
+    if (n <= 1 || (n > 2 && n % 2 === 0))
+        return false;
+    for (let i = 3; i * i <= n; i += 2) {
+        if (n % i === 0)
+            return false;
+    }
+    return true;
 }
 
 // END OF SOLUTION - ✨ Mischief Managed ✨

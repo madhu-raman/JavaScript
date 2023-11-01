@@ -1,35 +1,37 @@
-// 👋 Ahoy, Tech Titans! 👋
+// 👋 Hi, Algorithm Architects! 👋
 
 // ❓ PROBLEM HEADING ❓
-// Reverse the digits of a given number.
+// Find the factorial of a given number.
 
 // 📝 DETAILED PROBLEM DESCRIPTION 📝
-// Given a whole number n, write a function to find its reverse and return it.
-// Output should also be a whole number, so the output can't have any leading zeroes.
+// Given an input n, write a function to calculate and return its factorial.
+// Factorial of a number n is calculated by multiplying all positive integers from 1 to n.
+// Factorial of 0 is 1.
+// Factorial doesn't exist for negative numbers.
 // Also solve for the inputs that don't meet the constraints as follows:
 // If input does not satisfy any of the constraints, return "Invalid".
 
 // 🖨️ OUTPUT FORMAT 🖨️
-// Return a number that's the reverse of the given number.
+// For a valid input n, return the factorial of n.
 // If the given input doesn't meet any constraint, then return "Invalid".
 
 // 🛑 CONSTRAINTS 🛑
-// Number should be a whole number.
-// It can range from 0 to 99999.
-// No special characters, spaces, decimal numbers, alphabets are accepted.
+// Input n should be a whole number.
+// n should be less than or equal to 999.
+// Special characters, alphabets, and fractions are not allowed.
 
 // 🧪 SAMPLE INPUT 1 🧪
-// n = 1000
+// n = 0
 // 👌 SAMPLE OUTPUT 1 👌
 // 1
 
 // 🧪 SAMPLE INPUT 2 🧪
-// n = 12345
+// n = 5
 // 👌 SAMPLE OUTPUT 2 👌
-// 54321
+// 120
 
 // 🧪 SAMPLE INPUT 3 🧪
-// n = -1
+// n = -3
 // 👌 SAMPLE OUTPUT 3 👌
 // Invalid
 
@@ -49,29 +51,27 @@
 // Invalid
 
 // 🧪 SAMPLE INPUT 7 🧪
-// n = 5
+// n = 10
 // 👌 SAMPLE OUTPUT 7 👌
-// 5
+// 3628800
 
 // START OF SOLUTION - 🔮 I Solemnly Commit To Coding Curiosity 🔮
 
-function reverseNumber (n) {
-    if (n % 1 !== 0 || n < 0 || n > 99999 || typeof(n) !== "number")
+function findFactorial (n) {
+    if (typeof(n) !== "number" || n % 1 !== 0 || n < 0 || n > 999)
         return "Invalid";
-    let reversed = 0;
-    while (n > 0) {
-        reversed = (reversed * 10) + (n % 10);
-        n = Math.floor(n / 10);
-    }
-    return reversed;
+    let factorial = 1;
+    for (let i = 2; i <= n; i++)
+        factorial *= i;
+    return factorial;
 }
 
 // END OF SOLUTION - ✨ Mischief Managed ✨
 
 // ⏱️ TIME COMPLEXITY ⏱️
-// O(log(n))
+// O(n)
 
 // ⬅️ SPACE COMPLEXITY ➡️
 // O(1)
 
-// 🙏 NAMASTE - May your programs be snappy, not sappy! 🙏
+// 🙏 NAMASTE - May your software shine and never decline! 🙏

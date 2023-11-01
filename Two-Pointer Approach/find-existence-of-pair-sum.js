@@ -19,7 +19,6 @@
 // n = 5 --> Number of elements in array
 // arr = [2, 4, 5, 8, 9] --> Array elements
 // target_sum = 7 --> Target sum value
-
 // 👌 SAMPLE OUTPUT 1 👌
 // true
 
